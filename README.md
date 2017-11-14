@@ -4,7 +4,7 @@ Trabajo diciembre
 
 Limpiar archivos temporales (GNU/Linux)
 
-IFS="
+$IFS="
 
 "
 
