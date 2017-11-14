@@ -1,0 +1,23 @@
+CREATE TABLE rol (
+       id INT NOT NULL AUTO_INCREMENT,
+       nombre VARCHAR(10),
+       permisos VARCHAR(500)
+);
+INSERT INTO rol (nombre, permisos) VALUES ('developer', '/');
+INSERT INTO rol (nombre, permisos) VALUES ('user', 'users/%id_usuario%/');
+CREATE TABLE usuarios (
+       id INT NOT NULL AUTO_INCREMENT,
+       nombre VARCHAR(15) NOT NULL,
+       passwd VARCHAR(65),
+       id_rol INT,
+       zz
+       PRIMARY KEY (id)
+);
+CREATE TABLE anuncios (
+       id INT NOT NULL AUTO_INCREMENT,
+       id_usuario INT,
+       titulo VARCHAR(20),
+       descripcion VARCHAR(240),
+       PRIMARY KEY (id),
+       FOREIGN KEY (id_usuario) REFERENCES usuarios (id)
+);
