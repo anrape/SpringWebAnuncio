@@ -1,6 +1,3 @@
-import com.example.demo.entity.Rol;
-import java.util.List;
-
 public interface RolService {
     public abstract Rol addRol(Rol rol) ;
     public abstract List<Rol> listAllRol();

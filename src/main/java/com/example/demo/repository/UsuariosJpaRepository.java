@@ -7,13 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import com.example.demo.entity.Usuarios;
 
-
-
-
-@Repository("usuarioRepository")
-public interface UsuariosRepository extends JpaRepository<Usuarios, Serializable>{
+@Repository("usuarioJpaRepository")
+public interface UsuariosJpaRepository extends JpaRepository<Usuarios, Serializable>{
 	
-public abstract Usuarios findById(Integer id);
-	
-
+    public abstract Usuarios findById(Integer id);
+ 
 }
