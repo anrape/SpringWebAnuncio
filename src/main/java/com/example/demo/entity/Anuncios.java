@@ -17,7 +17,7 @@ public class Anuncios {
 	@Id
 	@GeneratedValue
 	@Column(name = "id", unique = true, nullable = false)
-	private Integer ID;
+	private Integer id;
 	@Column(name = "titulo", unique = false, nullable = false, length = 20)
 	private String titulo;
 	@Column(name = "usuario_id", nullable = false)
@@ -83,8 +83,8 @@ public class Anuncios {
 		return usuario;
 	}
 
-	public void setId(Set<Usuarios> id) {
-		this.id = id;
+	public void setId(Set<Usuarios> usuario) {
+		this.usuario = usuario;
 	}
 
 	/*

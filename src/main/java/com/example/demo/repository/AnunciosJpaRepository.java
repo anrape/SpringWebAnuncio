@@ -11,5 +11,5 @@ import com.example.demo.entity.Anuncios;
 @Repository("anunciosJpaRepository")
 public interface AnunciosJpaRepository extends JpaRepository<Anuncios, Serializable> {
     public abstract Anuncios findById(int id);
-    public abstract List<Anuncios> findByTitle(String[] Title);
+    public abstract List<Anuncios> findByTitulo(String[] Title);
 }

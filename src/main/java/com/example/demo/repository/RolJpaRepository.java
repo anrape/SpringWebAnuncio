@@ -8,10 +8,10 @@ import org.springframework.stereotype.Repository;
 
 import com.example.demo.entity.Rol;
 
-@Repository("rolRepository")
+@Repository("rolJpaRepository")
 public interface RolJpaRepository extends JpaRepository<Rol, Serializable> {
 
     public abstract Rol findById(Integer rolId);
-    public abstract List<Rol> findByPermission(Integer maxPerm);
+    //    public abstract List<Rol> findByPermission(Integer maxPerm);
     
 }
