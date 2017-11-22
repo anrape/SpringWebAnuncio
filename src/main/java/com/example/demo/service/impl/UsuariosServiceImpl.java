@@ -1,6 +1,10 @@
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import java.util.List;
+
 import com.example.demo.service.*;
+import com.example.demo.entity.Usuarios;
+import com.example.demo.repository.UsuariosJpaRepository;
 
 public class UsuariosServiceImpl implements UsuariosService {
     @Autowired

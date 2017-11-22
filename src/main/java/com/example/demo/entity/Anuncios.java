@@ -39,7 +39,7 @@ public class Anuncios {
 
 	public Anuncios(Integer anuncioId, String titulo, Integer userId, String descripcion, Set<Usuarios> id) {
 		super();
-		this.anuncioId = anuncioId;
+		this.id = anuncioId;
 		this.titulo = titulo;
 		this.userId = userId;
 		this.descripcion = descripcion;
@@ -48,11 +48,11 @@ public class Anuncios {
 	}
 
 	public Integer getAnuncioId() {
-		return anuncioId;
+		return id;
 	}
 
 	public void setAnuncioId(Integer anuncioId) {
-		this.anuncioId = anuncioId;
+		this.id = anuncioId;
 	}
 
 	public String getTitulo() {

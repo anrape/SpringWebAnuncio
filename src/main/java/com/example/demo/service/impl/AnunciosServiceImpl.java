@@ -2,8 +2,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import java.util.List;
 
-import com.example.demo.entity.Anuncio;
-import com.example.demo.repository.RolJpaRepository;
+import com.example.demo.entity.Anuncios;
+import com.example.demo.repository.AnunciosJpaRepository;
 
 public class AnunciosServiceImpl implements AnunciosService {
     @Autowired
