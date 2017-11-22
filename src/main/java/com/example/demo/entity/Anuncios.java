@@ -17,7 +17,7 @@ public class Anuncios {
 	@Id
 	@GeneratedValue
 	@Column(name = "id", unique = true, nullable = false)
-	private Integer id;
+	private Integer ID;
 	@Column(name = "titulo", unique = false, nullable = false, length = 20)
 	private String titulo;
 	@Column(name = "usuario_id", nullable = false)
@@ -30,7 +30,7 @@ public class Anuncios {
 
 	public Anuncios(Integer anuncioId, String titulo, Integer userId, String descripcion) {
 		super();
-		this.anuncioId = anuncioId;
+		this.id = anuncioId;
 		this.titulo = titulo;
 		this.userId = userId;
 		this.descripcion = descripcion;
