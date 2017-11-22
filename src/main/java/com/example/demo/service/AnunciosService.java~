@@ -1,0 +1,6 @@
+public interface AnunciosService {
+    public abstract Anuncios addAnuncio(Anuncios anuncios) ;
+    public abstract List<Anuncios> listAllAnuncios();
+    public abstract int removeAnuncios(int id);
+    public abstract Anuncios updateAnuncios(Anuncios anuncios);
+}

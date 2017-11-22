@@ -16,8 +16,8 @@ import javax.persistence.Table;
 public class Anuncios {
 	@Id
 	@GeneratedValue
-	@Column(name = "idanuncio", unique = true, nullable = false)
-	private Integer anuncioId;
+	@Column(name = "id", unique = true, nullable = false)
+	private Integer id;
 	@Column(name = "titulo", unique = false, nullable = false, length = 20)
 	private String titulo;
 	@Column(name = "usuario_id", nullable = false)
