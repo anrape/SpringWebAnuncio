@@ -26,7 +26,7 @@ public class Anuncios {
 	private String descripcion;
 
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "")
-	private Set<Usuarios> id = new HashSet<Usuarios>();
+	private Set<Usuarios> usuario = new HashSet<Usuarios>();
 
 	public Anuncios(Integer anuncioId, String titulo, Integer userId, String descripcion) {
 		super();
@@ -43,7 +43,7 @@ public class Anuncios {
 		this.titulo = titulo;
 		this.userId = userId;
 		this.descripcion = descripcion;
-		this.id = id;
+		this.usuario = usuario;
 
 	}
 
@@ -79,8 +79,8 @@ public class Anuncios {
 		this.descripcion = descripcion;
 	}
 
-	public Set<Usuarios> getId() {
-		return id;
+    public Set<Usuarios> getUsuario() {
+		return usuario;
 	}
 
 	public void setId(Set<Usuarios> id) {
