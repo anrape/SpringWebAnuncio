@@ -23,6 +23,9 @@ dist/
 nbdist/
 .nb-gradle/
 
+### Emacs ###
+*~
+
 ### Userdata ###
 users/
 application.yml
