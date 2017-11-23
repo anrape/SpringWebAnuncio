@@ -30,4 +30,4 @@ nbdist/
 ### Userdata ###
 users/
 application.yml
-.mvn
+.mvn/
