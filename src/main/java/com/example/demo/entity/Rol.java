@@ -13,13 +13,13 @@ import javax.persistence.UniqueConstraint;
 ;
 
 @Entity
-@Table(name = "rol", uniqueConstraints = @UniqueConstraint(columnNames = { "rol", "nombre" }))
+@Table(name = "rol", uniqueConstraints = @UniqueConstraint(columnNames = { "rol_id", "nombre" }))
 public class Rol {
 
 	@Id
 	@GeneratedValue
 	@Column(name = "rol_id", unique = true, nullable = false)
-	private Integer rolId;
+	private Integer id;
 
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "nombre", nullable = false)
@@ -28,9 +28,9 @@ public class Rol {
 	@Column(name = "admin", nullable = false)
 	private boolean admin;
 
-	public Rol(Integer rolId, Usuarios usuario, boolean admin) {
+	public Rol(Integer id, Usuarios usuario, boolean admin) {
 		super();
-		this.rolId = rolId;
+		this.id = id;
 		this.usuario = usuario;
 		this.admin = admin;
 	}
@@ -40,11 +40,11 @@ public class Rol {
 	}
 
 	public Integer getRolId() {
-		return rolId;
+		return id;
 	}
 
-	public void setRolId(Integer rolId) {
-		this.rolId = rolId;
+	public void setRolId(Integer id) {
+		this.id = id;
 	}
 
 	public Usuarios getUsuario() {

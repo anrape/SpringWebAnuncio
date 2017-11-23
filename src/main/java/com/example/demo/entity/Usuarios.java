@@ -32,7 +32,7 @@ public class Usuarios {
 	@Column(name = "estado", nullable = false)
 	private boolean estado;
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "user")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "id")
 	private Set<Rol> rol = new HashSet<Rol>();
 
 	public Usuarios(String usuario, String contrasena, Boolean estado) {
