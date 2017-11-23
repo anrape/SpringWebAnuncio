@@ -24,6 +24,9 @@ public class Rol {
     @Column(name = "id", unique = true, nullable = false)
     private Long id;
 
+    @Column(name = "titulo", unique = true, nullable = false)
+    private String titulo;
+    
     @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "rol_fk")
     private Set<Usuarios> usuarios = new HashSet<Usuarios>();
@@ -31,14 +34,11 @@ public class Rol {
     @Column(name = "admin", nullable = false)
     private boolean admin;
     
-    public Rol(Long id, boolean admin) {
+    public Rol(Long id, String titulo, boolean admin) {
 	super();
 	this.id = id;
+	this.titulo = titulo;
 	this.admin = admin;
-    }
-    
-    public Rol() {
-	
     }
     
     public Long getRolId() {

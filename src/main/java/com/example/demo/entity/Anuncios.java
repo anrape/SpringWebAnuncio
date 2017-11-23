@@ -28,11 +28,10 @@ public class Anuncios {
     @Column(name = "descripcion", length = 500)
     private String descripcion;
 
-    
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "usuarios_fk")
     private Usuarios usuario;
-    
+
     public Anuncios(Integer id, String titulo, Usuarios usuarios, String descripcion) {
 	super();
 	this.id = id;
@@ -57,15 +56,15 @@ public class Anuncios {
     public void setTitulo(String titulo) {
 	this.titulo = titulo;
     }
-    /*
-    public Usuarios getUsuarios() {
-	return this.usuarios;
+
+    public void setUsuario(Usuarios usuario) {
+        this.usuario = usuario;
     }
 
-    public void setUsuarios(Usuarios usuarios) {
-	this.usuarios = usuarios;
+    public Usuarios getUsuario() {
+        return this.usuario;
     }
-    */
+
     public String getDescripcion() {
 	return descripcion;
     }
@@ -74,18 +73,4 @@ public class Anuncios {
 	this.descripcion = descripcion;
     }
 
-    /*
-     * DESCARTADO
-     * 
-     * @Lob
-     * 
-     * @Column(name = "anuncio_imagen", nullable = true)
-     * 
-     * private byte[] imagen; public void setImagen(String filename) { this.imagen =
-     * Anuncios.getByteImage(filename);
-     * 
-     * } public static byte[] getByteImage(String filename) throws IOException {
-     * byte[] retorno = Files.readAllBytes(new File(filename).toPath()); return
-     * retorno; }
-     */
 }
