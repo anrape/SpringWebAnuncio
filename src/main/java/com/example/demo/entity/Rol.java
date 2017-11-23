@@ -16,7 +16,7 @@ import javax.persistence.UniqueConstraint;
 import com.example.demo.entity.Usuarios;
 
 @Entity
-@Table(name = "rol", uniqueConstraints = @UniqueConstraint( columnNames = { "id", "nombre" } ))
+@Table(name = "rol", uniqueConstraints = @UniqueConstraint( columnNames = { "id" } ))
 public class Rol {
     
     @Id
@@ -24,13 +24,8 @@ public class Rol {
     @Column(name = "id", unique = true, nullable = false)
     private Long id;
 
-    @Column(name = "nombre", unique = true, nullable = false)
-    private String nombre;
-
-    @Column(name = "usuarios_id")
-    private Long usuarios_id;
-    
-    @OneToMany(fetch = FetchType.LAZY, mappedBy="id")
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "rol_fk")
     private Set<Usuarios> usuarios = new HashSet<Usuarios>();
     
     @Column(name = "admin", nullable = false)

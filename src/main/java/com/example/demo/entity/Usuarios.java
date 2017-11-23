@@ -8,10 +8,12 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.UniqueConstraint;
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 import java.security.MessageDigest;
@@ -24,7 +26,8 @@ public class Usuarios {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", unique = true, nullable = false)
     private Long id;
-    @Column(name = "nombre", unique = true, nullable = false, length = 10)
+
+    @Column(name = "usuario", unique = true, nullable = false, length = 10)
     private String usuario;
     
     @Column(name = "contraseña", nullable = false, length = 65)
@@ -37,6 +40,11 @@ public class Usuarios {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "rol_fk")
     private Rol rol;
+
+    
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "usuarios_fk")
+    private Set<Anuncios> anuncios = new HashSet<Anuncios>();
     
     public Usuarios(String usuario, String contrasena, Boolean estado) {
 	super();
