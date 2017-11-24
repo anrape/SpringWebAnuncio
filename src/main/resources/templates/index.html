@@ -1,5 +1,53 @@
-<html>
-  <body>
-    <h1> HOLA MUNDO </h1>
-  </body>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+
+<title>Login</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+<style type="text/css">
+body {
+	background-color: #5677fc;
+	font-family: verdana;
+}
+#botones{
+column-count:2;
+}
+</style>
+
+</head>
+
+<body>
+
+	<div class="container" align="center">
+
+		<form class="form-signin" action="#" th:action="@{/logincheck}"
+			method="POST" style="margin: 0 auto; margin-top: 15%">
+			<input type="hidden" name="${_csrf.parameterName}"
+				value="${_csrf.token}" />
+			<h2 class="form-signin-heading">Todo Anuncios</h2>
+			<label for="inputEmail" class="sr-only">Usuario</label> <input
+				type="text" class="form-control" placeholder="Usuario"
+				name="usuario" id="usuario" /> <label for="inputPassword"
+				class="sr-only">Contraseña</label> <input type="password"
+				class="form-control" placeholder="Contraseña" name="contrasena"
+				id="contrasena" />
+			<div id="botones">
+				<button class="btn btn-lg btn-primary btn-block" type="submit">
+					<span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+					Entrar
+				</button>
+				<button class="btn btn-lg btn-primary btn-block" type="submit">
+					<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+					Registrarse
+				</button>
+			</div>
+		</form>
+
+	</div>
+	<!-- /container -->
+</body>
 </html>

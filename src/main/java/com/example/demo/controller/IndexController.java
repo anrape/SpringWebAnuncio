@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/index")
+@RequestMapping("/")
 public class IndexController {
     public static final String INDEX_VIEW = "index";
 
-    @GetMapping("/indexString")
+    @GetMapping("/index")
     public String indexString() {
 	System.out.println("hola");
 	return INDEX_VIEW;
