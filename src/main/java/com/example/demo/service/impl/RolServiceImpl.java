@@ -8,6 +8,8 @@ import java.util.List;
 import com.example.demo.entity.Rol;
 import com.example.demo.repository.RolJpaRepository;
 
+import com.example.demo.service.RolService;
+
 public class RolServiceImpl implements RolService {
     @Autowired
     @Qualifier("RolJpaRepository")

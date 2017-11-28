@@ -8,6 +8,8 @@ import java.util.List;
 import com.example.demo.entity.Anuncios;
 import com.example.demo.repository.AnunciosJpaRepository;
 
+import com.example.demo.service.AnunciosService;
+
 public class AnunciosServiceImpl implements AnunciosService {
     @Autowired
     @Qualifier("AnuncioJpaRepository")
