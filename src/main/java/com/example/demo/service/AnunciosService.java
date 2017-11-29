@@ -1,3 +1,5 @@
+package com.example.demo.service;
+
 import com.example.demo.entity.Anuncios;
 import java.util.List;
 

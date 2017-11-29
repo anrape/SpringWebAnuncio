@@ -1,9 +1,14 @@
+package com.example.demo.service.impl;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+
 import java.util.List;
 
 import com.example.demo.entity.Rol;
 import com.example.demo.repository.RolJpaRepository;
+
+import com.example.demo.service.RolService;
 
 public class RolServiceImpl implements RolService {
     @Autowired

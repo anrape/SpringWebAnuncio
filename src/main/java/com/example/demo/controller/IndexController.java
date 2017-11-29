@@ -1,3 +1,4 @@
+
 package com.example.demo.controller;
 
 import org.springframework.stereotype.Controller;
@@ -10,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class IndexController {
     public static final String INDEX_VIEW = "index";
 
-    @GetMapping("/indexString")
+    @GetMapping("/index")
     public String indexString() {
 	System.out.println("hola");
 	return INDEX_VIEW;

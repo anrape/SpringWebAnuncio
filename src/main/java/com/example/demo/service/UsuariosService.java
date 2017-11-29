@@ -1,5 +1,8 @@
+package com.example.demo.service;
+
 import java.util.List;
 import com.example.demo.entity.Usuarios;
+
 public interface UsuariosService {
     public abstract Usuarios addUsuarios(Usuarios rol) ;
     public abstract List<Usuarios> listAllUsuarios();
