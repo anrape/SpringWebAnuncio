@@ -7,7 +7,6 @@ import java.util.List;
 
 import com.example.demo.entity.Anuncios;
 import com.example.demo.repository.AnunciosJpaRepository;
-import com.example.demo.service.AnunciosService;
 
 import com.example.demo.service.AnunciosService;
 

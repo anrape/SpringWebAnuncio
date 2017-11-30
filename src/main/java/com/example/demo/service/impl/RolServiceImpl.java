@@ -7,7 +7,6 @@ import java.util.List;
 
 import com.example.demo.entity.Rol;
 import com.example.demo.repository.RolJpaRepository;
-import com.example.demo.service.RolService;
 
 import com.example.demo.service.RolService;
 
