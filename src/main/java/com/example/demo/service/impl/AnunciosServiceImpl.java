@@ -2,10 +2,13 @@ package com.example.demo.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+
 import java.util.List;
 
 import com.example.demo.entity.Anuncios;
 import com.example.demo.repository.AnunciosJpaRepository;
+import com.example.demo.service.AnunciosService;
+
 import com.example.demo.service.AnunciosService;
 
 public class AnunciosServiceImpl implements AnunciosService {

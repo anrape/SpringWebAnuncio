@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.28.3/dam124_SpringWebAnuncio
+    username: dam124
+    password: Salesianas123*
+    
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+         dialect: org.hibernate.dialect.MySQL5Dialect
+  thymeleaf:
+    cache: true
+    check-template: true
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    encoding: UTF-8
+    mode: HTML5
+    prefix: 
+      classpath: /templates/
+    suffix: .html
+    view-names: index
