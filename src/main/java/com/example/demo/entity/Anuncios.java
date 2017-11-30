@@ -40,6 +40,10 @@ public class Anuncios {
 	this.descripcion = descripcion;
 
     }
+    
+    public Anuncios(){
+    	
+    }
 
     public Integer getId() {
 	return id;

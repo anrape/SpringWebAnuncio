@@ -1,5 +1,194 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    <h1> HOLA MUNDO </h1>
-  </body>
+<head>
+<meta charset="utf-8" />
+
+<title>Todo Anuncios</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+body {
+	background-color: #5677fc;
+	font-family: verdana;
+}
+
+.panel-heading {
+	background-color: #337ab7 !important;
+}
+
+#contenedor {
+	padding: 20px;
+}
+
+a {
+	color: white;
+}
+</style>
+
+</head>
+
+<body>
+
+	<div align="right">
+		<a href="#" class="btn btn-primary"><span
+			class="glyphicon glyphicon-user"></span> Identificate</a> <a href="#"
+			class="btn btn-primary"><span class="glyphicon glyphicon-log-out"></span>Salir</a>
+	</div>
+
+
+
+	<div align="center">
+		<header>
+			<h2 class="form-signin-heading">Todo Anuncios</h2>
+		</header>
+	</div>
+
+
+
+	<div class="row" id="contenedor">
+
+		<div class="col-xs-3 col-sm-3 col-md-3">
+			<a href="#" class="btn btn-block btn-lg btn-primary"
+				data-toggle="modal" data-target="#myModalCrear"><span
+				class="glyphicon glyphicon-plus"></span> Crear Anuncio</a>
+		</div>
+		
+		<table>
+		<thead>
+			<tr>
+				<th><u>Curso</u></th>
+				<th><u>Descripción</u></th>
+				<th><u>Precio</u></th>
+				<th><u>Horas</u></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="anuncio : ${anuncios}">
+				<th><span th:text="${anuncio.descripcion}"></span></th>
+				<th><span th:text="${anuncio.usuario}"> </span></th>
+				<th><span th:text="${anuncio.titulo}"> </span></th>
+			
+			</tr>
+		</tbody>
+	</table>
+
+		<div class="col-xs-9 col-sm-9 col-md-9">
+			
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion"
+									href="#collapse1"></a> 
+							</h4>
+						</div>
+
+						<div id="collapse1" class="panel-collapse collapse in">
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-4">
+										<div class="thumbnail">
+											<a href="imagen1.jpg" target="_blank"> <img
+												src="imagen1.jpg" alt="Lights" style="width: 100%"></img>
+
+											</a>
+										</div>
+									</div>
+									<div>
+										descripcion: 
+									</div>
+									<div align="left">
+										usuario:
+									</div>
+									<div align="right">
+										<a href="#" class="btn btn-xs btn-primary"><span
+											class="glyphicon glyphicon-trash"></span> </a> <a href="#"
+											class="btn btn-xs btn-primary" data-toggle="modal"
+											data-target="#myModal"><span
+											class="glyphicon glyphicon-pencil"></span> </a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+		</div>
+	</div>
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">editar</h4>
+				</div>
+				<div class="modal-body">
+					<div class="input-group input-group-lg">
+						<span class="input-group-addon"></span> <input type="text"
+							class="form-control" placeholder="titulo del articulo"></input>
+					</div>
+					<div class="input-group input-group-lg">
+						<span class="input-group-addon"></span> <input type="text"
+							class="form-control" placeholder="numero de telefono" />
+					</div>
+					<div class="input-group input-group-lg">
+						<span class="input-group-addon"></span> <input type="text"
+							class="form-control" placeholder="precio" />
+					</div>
+					<div class="form-group">
+						<textarea class="form-control" rows="5" id="comment"
+							placeholder="Descripcion"></textarea>
+					</div>
+					<input id="input-b2" name="input-b2" type="file" class="file"
+						data-show-preview="false"></input>
+					<button class="btn btn-lg btn-primary btn-block" type="submit">
+						<span class="glyphicon" aria-hidden="true"></span> Editar Anuncio
+					</button>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal fade" id="myModalCrear" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title" action="#" method="post">Crear</h4>
+				</div>
+				<div class="modal-body">
+					<div class="input-group input-group-lg">
+						<span class="input-group-addon"></span> <input type="text"
+							class="form-control" placeholder="titulo del articulo"></input>
+					</div>
+
+
+					<div class="form-group">
+						<textarea class="form-control" rows="5" id="textArea1"
+							placeholder="Descripcion"></textarea>
+					</div>
+					<input id="input-b2.1" name="input-b2" type="file" class="file"
+						data-show-preview="false" />
+					<button class="btn btn-lg btn-primary btn-block" type="submit">
+						<span class="glyphicon" aria-hidden="true"></span> Crear anuncio
+					</button>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
 </html>
