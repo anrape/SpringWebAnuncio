@@ -1,0 +1,7 @@
+body {
+    background-color: #5677fc;
+    font-family: verdana;
+}
+#botones{
+    column-count:2;
+}
